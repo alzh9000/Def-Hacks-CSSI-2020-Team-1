@@ -21,4 +21,21 @@ body {
 }
 .card-body{
   font-family: "Arciform", "Montserrat", sans-serif; color: white;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.card-body img{
+  object-fit: contain;
+}
+.btn{
+  width: 300px;
+  padding: 10px;
+}
+
+.btn img{
+  max-width: 30px;
+  height: auto;
 }
