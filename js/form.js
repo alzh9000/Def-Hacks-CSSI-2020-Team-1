@@ -28,7 +28,6 @@ $(document).ready(function () {
 
     });
 
-
     $("input[type=file]").on('change', function () {
         //var url = URL.createObjectURL($("#input-file-now").prop("files")[0]);
         var reader = new FileReader();
@@ -43,61 +42,84 @@ $(document).ready(function () {
             }
         })
         loadbase64data.then(async function (base64data) {
-            var arr = await analyzeImage(base64data);
-
-            //var arr = ["Orange", "Apple"];
-            console.log(arr);
-            document.getElementById("input-file-now").value = "";
-            for (var i = 0; i < arr.length; i++) {
-                var fitem = '<div id=' + arr[i] + '">' + arr[i] + '<button type="button" class="close" aria-hidden="true">x</button></div>';
-                //console.log(fitem);
-                if (document.getElementById(arr[i]) === null) {
-                    $("#food-items").append(fitem);
-                }
-            }
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            var raw = JSON.stringify({
+                "requests": [{
+                    "image": {
+                        "content": base64data
+                    },
+                    "features": [{
+                        "type": "LABEL_DETECTION"
+                    }]
+                }]
+            });
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            fetch("https://vision.googleapis.com/v1/images:annotate?key=AIzaSyAlfumiq1JqbC8naT9APEDFrZt6jLKyUSw", requestOptions)
+                .then(response => response.text())
+                .then((result) => {
+                    //console.log(result);
+                    //var arr = ["Orange", "Apple"];
+                    result = JSON.parse(result);
+                    console.log(result);
+                    var arr = objToFood(result);
+                    console.log(arr);
+                    document.getElementById("input-file-now").value = "";
+                    for (var i = 0; i < arr.length; i++) {
+                        var idName = "'" + arr[i] + "'";
+                        var fitem = '<div id=' + idName + '>' + arr[i] + '<button type="button" class="close" aria-hidden="true" onClick="removeParentDiv(' + idName + ')">x</button></div>';
+                        //console.log(fitem);
+                        if (document.getElementById(arr[i]) === null) {
+                            $("#food-items").append(fitem);
+                        }
+                    }
+                })
+                .catch(error => console.log('error', error));
         })
     });
-
-    $(".close").click(function (e) {
-        console.log("hi!")
-        console.log($(this).parent());
-        e.preventDefault();
-        $(this).parent().remove();
-    });
-
 });
 
-async function analyzeImage(url) {
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-    var raw = JSON.stringify({
-        "requests": [{
-            "image": {
-                "content": url
-            },
-            "features": [{
-                "type": "LABEL_DETECTION"
-            }]
-        }]
-    });
-    var requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        body: raw,
-        redirect: 'follow'
-    };
-    fetch("https://vision.googleapis.com/v1/images:annotate?key=AIzaSyAlfumiq1JqbC8naT9APEDFrZt6jLKyUSw", requestOptions)
-        .then(response => response.text())
-        .then((result) => {
-            //console.log(result);
-            return Promise.resolve(result);
-        })
-        .catch(error => console.log('error', error));
+function removeParentDiv(id) {
+    var myobj = document.getElementById(id);
+    myobj.remove();
 }
+
+// async function analyzeImage(url) {
+//     var myHeaders = new Headers();
+//     myHeaders.append("Content-Type", "application/json");
+//     var raw = JSON.stringify({
+//         "requests": [{
+//             "image": {
+//                 "content": url
+//             },
+//             "features": [{
+//                 "type": "LABEL_DETECTION"
+//             }]
+//         }]
+//     });
+//     var requestOptions = {
+//         method: 'POST',
+//         headers: myHeaders,
+//         body: raw,
+//         redirect: 'follow'
+//     };
+//     fetch("https://vision.googleapis.com/v1/images:annotate?key=AIzaSyAlfumiq1JqbC8naT9APEDFrZt6jLKyUSw", requestOptions)
+//         .then(response => response.text())
+//         .then((result) => {
+//             //console.log(result);
+//             return Promise.resolve(result);
+//         })
+//         .catch(error => console.log('error', error));
+// }
 
 
 function objToFood(o) {
-    o = o["responses"];
+    o = o.responses[0].labelAnnotations;
     var arr = [];
     for (var i = 0; i < o.length; i++) {
         arr.push(o[i].description);
