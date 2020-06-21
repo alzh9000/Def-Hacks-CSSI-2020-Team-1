@@ -27,6 +27,9 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+.card-text{
+  width: 300px;
+}
 .card-body img{
   object-fit: contain;
 }

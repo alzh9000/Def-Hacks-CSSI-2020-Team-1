@@ -1,0 +1,44 @@
+@font-face {
+   font-family: 'Arciform';
+   src: url('../assets/Arciform.woff2') format('woff2'),
+       url('../assets/Arciform.woff') format('woff'), url("../assets/Arciform.ttf") format("truetype"), url('../assets/Arciform.otf')  format('opentype');
+   font-weight: normal;
+   font-style: normal;
+   font-display: swap;
+}
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,700&display=swap');
+
+
+.container {
+ font-family: 'Montserrat', 'Arciform', sans-serif;
+}
+.container h1{
+ font-family: 'Arciform', 'Montserrat',  sans-serif;
+ color: #32373B;
+ padding:10px 0 0 0;
+ font-size: 4em;
+}
+.container h3, h4{
+  color: #32373B;
+  font-weight: bold;
+}
+.container h4{
+  font-size: 1em; 
+}
+.container tag{
+  color: #4A5859;
+  font-weight: 700;
+  font-style: italic;
+}
+.d-flex{
+  margin-top: 10px;
+}
+.d-flex img{
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+.padding{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
