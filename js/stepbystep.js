@@ -7,21 +7,26 @@ $(document).ready(function () {
     for (var i = 0; i < instructions.length; i++) {
         var stepNumber = i + 1;
         var stepTitle = 'Step ' + stepNumber;
-        if (i === 0) {
+        if (i === 0 && i == instructions.length - 1) {
             var div = document.createElement('div');
-            div.innerHTML = '<div class="card w-75 h-100 mx-auto my-auto" id="' + i + '"> <div class="card-header"><h1>' + stepTitle + '</h1></div> <div class="card-body"><h2>' + instructions[i].step + '</h2></div> <div class="card-footer"><button style="float: right;" class="btn btn-success" type="button" onClick="nextPage(0)" id="next' + i + '">Next</button></div></div>';
+            div.innerHTML = '<div class="card w-75 h-100 mx-auto my-auto border border-primary border-thick" id="' + i + '"> <div class="card-header"><h1 class="text-center">' + stepTitle + '</h1></div> <div class="card-body"><h2>' + instructions[i].step + '</h2></div> <div class="card-footer"></div></div>';
+            //console.log(div);
+            document.getElementById('instructions divs').append(div);
+        } else if (i === 0) {
+            var div = document.createElement('div');
+            div.innerHTML = '<div class="card w-75 h-100 mx-auto my-auto border border-primary" id="' + i + '"> <div class="card-header"><h1 class="text-center">' + stepTitle + '</h1></div> <div class="card-body"><h2>' + instructions[i].step + '</h2></div> <div class="card-footer"><button style="float: right;" class="btn btn-success" type="button" onClick="nextPage(0)" id="next' + i + '">Next</button></div></div>';
             //console.log(div);
             document.getElementById('instructions divs').append(div);
         } else if (i == instructions.length - 1) {
             var div = document.createElement('div');
-            div.innerHTML = '<div class="card w-75 h-100 mx-auto my-auto" id="' + i + '"> <div class="card-header"><h1>' + stepTitle + '</h1></div> <div class="card-body"><h2>' + instructions[i].step + '</h2></div><div class="card-footer"><button class="btn btn-secondary" type="button" onClick="prevPage(' + i + ')" id="prev' + i + '">Previous</button></div></div>';
+            div.innerHTML = '<div class="card w-75 h-100 mx-auto my-auto border border-primary" id="' + i + '"> <div class="card-header"><h1 class="text-center">' + stepTitle + '</h1></div> <div class="card-body"><h2>' + instructions[i].step + '</h2></div><div class="card-footer"><button class="btn btn-secondary" type="button" onClick="prevPage(' + i + ')" id="prev' + i + '">Previous</button></div></div>';
             //console.log(div);
             document.getElementById('instructions divs').append(div);
             var divAccess = '#' + i;
             $(divAccess).hide()
         } else {
             var div = document.createElement('div');
-            div.innerHTML = '<div class="card w-75 h-100 mx-auto my-auto" id="' + i + '"> <div class="card-header"><h1>' + stepTitle + '</h1></div> <div class="card-body"><h2>' + instructions[i].step + '</h2></div> <div class="card-footer"><button class="btn btn-secondary" type="button" onClick="prevPage(' + i + ')" id="prev' + i + '">Previous</button><button style="float: right;" class="btn btn-success" type="button" onClick="nextPage(' + i + ')" id="next' + i + '">Next</button></div></div>';
+            div.innerHTML = '<div class="card w-75 h-100 mx-auto my-auto border border-primary" id="' + i + '"> <div class="card-header"><h1 class="text-center">' + stepTitle + '</h1></div> <div class="card-body"><h2>' + instructions[i].step + '</h2></div> <div class="card-footer"><button class="btn btn-secondary" type="button" onClick="prevPage(' + i + ')" id="prev' + i + '">Previous</button><button style="float: right;" class="btn btn-success" type="button" onClick="nextPage(' + i + ')" id="next' + i + '">Next</button></div></div>';
             //console.log(div);
             document.getElementById('instructions divs').append(div);
             var divAccess = '#' + i;
