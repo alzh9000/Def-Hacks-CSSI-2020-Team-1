@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "tender-281000",
+  "private_key_id": "1c45b462a5d7e0e140ab070a6f266416e5842333",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDosCHdpVttMomP\nnLkZiPYLP6SzKcleU8IZ31PuMieJLRqLaJjl3Smtj5Ku0Za3VTyGnu5QDnw3Fbzq\nVqOeiDdIxa39F657fZNzvgw1lmdFvCWmKYBfaw3gzxLCA75dDUJkepTAdGkXrHnn\nhEKuh5Q8ST3t5dMTIEOaudeCZhlIHApyVGLHQajK0fCcXnRYXA9sExRQIBmc1upJ\ngCpmOOvpr+cRFoU3P7cbUvfzT8WpuhWnBmPrYhMkOOBk90QwKahcFm6qx9jB/oX3\nWMa1Y+QEFjVWrv4sjxfPQovTG1NMincb+JhcXRgExvLl7U3uZKWTW641bC/2cgyQ\nPPAqTxoZAgMBAAECggEABZGlldjtybzCZxIAqhhJjzZcOj9/RscpZ5YdO5+uq41N\nS9XahvHWnAVKJO32NfgPxUcLfBYEqgrWpSMislofPJoikmKdNe5o94WuZB/v487f\ndc0bee0lfWJnWAZf6Xk2RBJc+ggvNbZWipBzShsLlK/KECYGebg1dgAJpODNrRiX\nBiRV2d3+h+oId1LzRXVDPQLodb2rj5b7i4VTAbboZAzliJB8GMNV4noKRLF5VUWy\nmHmLRMKO2a6rg70DjavvPuLwOyRi+Bn6YaUKxSvwqwWIT4dIjqQjVptmqtf7uatc\niaOYhwfGlzUcGa0mxI2x93xtYkxjkU2OzyLuYMTM2wKBgQD4oh9zTO6uhz5u4TlX\n4kwRG1gbr4XCAAafU0IYjGweIPMQa786AwRsiN/6n78TgTtJLzflKxzeTtWm1g9j\n+Rla491FLiBfCclLikneCGX/rTOF+FRl/5zgWmaSIlhBcNry3x0BhOfqMG11oHqM\nEbE5aX+/EJb073BMYO4wYzHZFwKBgQDvlRCfJNNciIX6xujzl1o5MMxbrGolIyGN\nEA0u0JepJkslkNrRPkfAxOT0OuFmjN3PdZSYpwAmL83vJd+WAR+ofX9n/AXgTREp\nL92h4061a/0nKDu7r8+zS5vejqA2ZJt9OC81dt4a+ylfcCtHazEszqPkQNxvD6L8\ntIgypbVETwKBgQCAYL2afDu1lBFxkQtZzHf4UUUiLnQDIp5Iv+Wd5UuiFuNKNEgt\nvQcYv2fe8YLooE6rUB0tUCB8zPnWRir2NNWZr5Q9tz5xtAzi20mewnlgFd9Hqlxx\nuhUXZrYVeHRXfd0fkIJamXRh4JV0KeN81VnLyiRy1C8N02AJn/b8twszCwKBgQDr\n/v38hZ3dzG2NdVoKeNBa/YKP2upD4rMt7N3Pe5GpARuMyX+CFcNAU7LkEQvupFvp\n+3yAUiCHfRdxtvDjJgA1TEmv+EUhiUiaNZgv22SwuMsJQ0xzuN7zUksbk4qlibzQ\nQAPgulJWaYl7hVZcZ25tIK+4K1v32oNGQd7XZPuFaQKBgQDmyW6HfGMZFYuCVbZ7\nkagOFKZQ6ETkiPqmN1Dl/XhQHVPRvgthmAysIS7RdZeOV17OoisL0Y8z7MOuiiJY\nSKM/r9CPojSm+TWJCHCAfoMA7gFO313L/s/7mbx8V4y0UP5EjolliYFSBTGkooks\nxzWYssKMM1sRrP6Ko69rQbk39A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "imagerecognition@tender-281000.iam.gserviceaccount.com",
+  "client_id": "107639530995665844688",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/imagerecognition%40tender-281000.iam.gserviceaccount.com"
+}
