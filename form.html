@@ -28,12 +28,10 @@
 
   <script src="js/form.js"></script>
   <script src="js/recipegenerator.js"></script>
-
-
 </head>
 
-<body>
 
+<body>
   <div class="container-fluid h-100 w-100">
     <!-- Progress bar for how far they are thru the form -->
     <div class="progress">
@@ -42,8 +40,7 @@
     </div>
 
     <!-- QUESTION 1 -->
-    <div id="q1" data-aos=" flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-      class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
+    <div id="q1" class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
       <div class="card-body">
         <h1 class="card-title"> Home Appliances </h1>
         <p class="card-text">What appliances do you have in your kitchen?</p>
@@ -52,14 +49,14 @@
         </div>
       </div>
       <!-- Equipment List -->
-      <div class="card-columns" id="eq-cards"></div>
+      <div class="card-columns" style="column-count: 6" id="eq-cards"></div>
     </div>
 
   </div>
   </div>
 
   <!-- QUESTION 2 -->
-  <div id="q2" data-aos=" flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+  <div id="q2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
     class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
     <div class="card-body">
       <h1 class="card-title"> Dietary/Allergy Restrictions </h1>
@@ -68,40 +65,97 @@
 
     <div class="card-group">
       <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Vegetarian</h5>
-          <p class="card-text"></p>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="vegetarian">
+            <label class="custom-control-label" for="vegetarian"></label>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card-group">
       <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Vegan</h5>
-          <p class="card-text"></p>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="vegan">
+            <label class="custom-control-label" for="vegan"></label>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card-group">
       <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Gluten-Free</h5>
-          <p class="card-text"></p>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="gluten-free">
+            <label class="custom-control-label" for="gluten-free"></label>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card-group">
       <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Dairy-Free</h5>
-          <p class="card-text"></p>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="dairy-free">
+            <label class="custom-control-label" for="dairy-free"></label>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- QUESTION 3 -->
+  <div id="q3" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+    class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
+    <div class="card-body">
+      <h1 class="card-title"> Ingredients </h1>
+      <p class="card-text">What are you looking for in a Tender match?</p>
+    </div>
+    <div id="food-items"></div>
+    <input type="file" id="input-file-now" style="display: none;" accept="image/*" />
+    <input type="button" value="Upload Image" onclick="document.getElementById('input-file-now').click();" />
+
+
+  </div>
+
+  <!-- QUESTION 4 -->
+  <div id="q4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+    class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
+    <div class="card-body">
+      <h1 class="card-title"> What do you want to make? </h1>
+      <p class="card-text">Do you have a type?</p>
+    </div>
+  </div>
+
+  <!-- QUESTION 5 -->
+  <div id="q5" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+    class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
+    <div class="card-body">
+      <h1 class="card-title"> Type of Cuisine </h1>
+      <p class="card-text">Tender Passport</p>
+    </div>
+  </div>
+
+  <!-- QUESTION 6 -->
+  <div id="q6" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+    class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
+    <div class="card-body">
+      <h1 class="card-title"> Max Time </h1>
+      <p class="card-text">How much time do you want to commit to your Tender match?</p>
+    </div>
+  </div>
+
+  <!-- QUESTION 7 -->
+  <div id="q7" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+    class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
+    <div class="card-body">
+      <h1 class="card-title"> Max/Min Calories </h1>
+      <p class="card-text">Picky about your Tender match?</p>
+    </div>
+  </div>
+
+
+
+
   </div>
 
 
