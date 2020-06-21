@@ -1,3 +1,12 @@
+@font-face {
+   font-family: 'Arciform';
+   src: url('../assets/Arciform.woff2') format('woff2'),
+       url('../assets/Arciform.woff') format('woff'), url("../assets/Arciform.ttf") format("truetype"), url('../assets/Arciform.otf')  format('opentype');
+   font-weight: normal;
+   font-style: normal;
+   font-display: swap;
+}
+
 body {
   background-image: linear-gradient(rgba(200,62,77,1), rgba(244,184,96,1));
   height: 100%;
@@ -6,7 +15,10 @@ body {
   background-attachment: fixed;
 }
 
-.card { 
+.card {
   background-color: white;
   border: none !important;
+}
+.card-body{
+  font-family: "Arciform", "Montserrat", sans-serif; color: white;
 }
