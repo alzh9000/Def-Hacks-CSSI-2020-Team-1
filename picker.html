@@ -9,18 +9,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/picker.css">
 
   <!-- Animate on Scroll Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+
+
+  <script src="js/picker.js"></script>
+
 </head>
 
 <body>
-<div class="container">
-<!-- TOGGLE
+  <div class="container">
+    <!-- TOGGLE
   <p>
     <a class="btn btn-toggle" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><img src="./assets/fork-spoon.png" alt="fork and spoon"></a>
     <button class="btn btn-toggle" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2"><img src="./assets/wrench-solid.svg" src="wrench"/></button>
@@ -43,19 +54,21 @@
   </div>
 -->
 
-<div class="wrapper container">
-<input type="checkbox" name="checkbox" class="switch">
-</div>
-<div class="container-fluid">
+    <div class="wrapper container">
+      <input type="checkbox" name="checkbox" class="switch">
+    </div>
 
+    <div id="swipecontainer" class="container-fluid animate">
       <img src="./assets/pancake.png" class="d-block w-75 shadow rounded " alt="pancake">
-</div>
-<nav class="navbar   rounded-pill navbar-float shadow-lg margin">
-<a class="navbar-brand" href="#"><img class="" src="./assets/tender-logo_gradient.png" width="35px"/></a>
-<a class="navbar-brand" href="#"><img class="" src="./assets/plus-solid.svg"/></a>
-<a class="navbar-brand" href="#"><img class="" src="./assets/user-circle-solid.svg"/></a>
-</nav>
-</div>
+    </div>
+
+
+    <nav class="navbar rounded-pill navbar-float shadow-lg margin">
+      <a class="navbar-brand" href="#"><img class="" src="./assets/tender-logo_gradient.png" width="35px" /></a>
+      <a class="navbar-brand" href="#"><img class="" src="./assets/plus-solid.svg" /></a>
+      <a class="navbar-brand" href="#"><img class="" src="./assets/user-circle-solid.svg" /></a>
+    </nav>
+  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
