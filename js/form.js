@@ -148,6 +148,8 @@ $(document).ready(function () {
                     // put code here for displaying the result
                     localStorage.setItem('recipe-results', result);
                     console.log(result);
+                }).then(function () {
+                    window.location.href='picker.html';
                 })
                 .catch(error => console.log('error', error));
         });
