@@ -1,14 +1,14 @@
 @font-face {
-   font-family: 'Arciform';
-   src: url('../assets/Arciform.woff2') format('woff2'),
-       url('../assets/Arciform.woff') format('woff'), url("../assets/Arciform.ttf") format("truetype"), url('../assets/Arciform.otf')  format('opentype');
-   font-weight: normal;
-   font-style: normal;
-   font-display: swap;
+  font-family: 'Arciform';
+  src: url('../assets/Arciform.woff2') format('woff2'),
+    url('../assets/Arciform.woff') format('woff'), url("../assets/Arciform.ttf") format("truetype"), url('../assets/Arciform.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-  background-image: linear-gradient(rgba(200,62,77,1), rgba(244,184,96,1));
+  background-image: linear-gradient(rgba(200, 62, 77, 1), rgba(244, 184, 96, 1));
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
@@ -19,26 +19,39 @@ body {
   background-color: white;
   border: none !important;
 }
-.card-body{
-  font-family: "Arciform", "Montserrat", sans-serif; color: white;
+
+.card-body {
+  font-family: "Arciform", "Montserrat", sans-serif;
+  color: white;
   height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-.card-text{
+
+.card-text {
   width: 300px;
-}
-.card-body img{
-  object-fit: contain;
-}
-.btn{
-  width: 300px;
-  padding: 10px;
 }
 
-.btn img{
+.card-body img {
+  object-fit: contain;
+}
+
+.btn {
+  width: 300px;
+  padding: 10px;
+
+}
+
+.btn:active {
+  background-color: white;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+.btn img {
   max-width: 30px;
   height: auto;
 }

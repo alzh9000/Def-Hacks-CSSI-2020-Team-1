@@ -10,21 +10,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,700&display=swap');
 
 body {
-    background-color: #FCFCFC;
+    background-image: linear-gradient(rgba(200, 62, 77, 1), rgba(244, 184, 96, 1));
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .container {
     font-family: 'Montserrat', 'Arciform', sans-serif;
-    position: fixed;
-    padding: 0;
-    margin: 0;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
 }
 
 .container h1 {

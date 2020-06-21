@@ -26,75 +26,80 @@
 </head>
 
 <body>
-  <div class="container">
-    <img id="recipeimage" class="d-block w-75 img-fluid mx-auto shadow rounded" alt="image">
-  </div>
-  <div class="container ">
-    <div class="flex-md-column">
-      <h1 id="recipetitle" class="text-left"></h1>
-      <tag id="summary" class="text-left"></tag>
-    </div>
+  <div class="container w-60">
+    <div class="container">
 
-    <div style="display: block;" class="d-flex card-group">
-      <div class="card">
-        <img src="./assets/clock-solid.svg" class="w-25 mx-auto card-img-top w-10" alt="...">
-        <div class="card-body">
-          <h2 class="card-title text-center">Prep Time</h2>
-          <p class="text-center" style="white-space:nowrap;display:inline;">Less than </p>
-          <p id="time" style="font-weight:bold;white-space:nowrap;display:inline;" class="text-center"></p>
-          <p class="text-center" style="white-space:nowrap;display:inline;"> minutes away!</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./assets/star-solid.svg" class="w-25 mx-auto card-img-top" alt="...">
-        <div class="card-body">
-          <h2 class="card-title text-center">Dietary/Allergy Restrictions</h2>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="Vegetarian">
-            <label class="form-check-label" for="Vegetarian">
-              Vegetarian </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="Vegan">
-            <label class="form-check-label" for="Vegan">
-              Vegan </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="Gluten-Free">
-            <label class="form-check-label" for="Gluten-Free">
-              Gluten-Free </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="Dairy-Free">
-            <label class="form-check-label" for="Dairy-Free">
-              Dairy-Free </label>
+    </div>
+    <div class="container">
+      <div style="margin-top: 50px" class="flex-md-column">
+        <h1 id="recipetitle" class="text-center"></h1><br>
+        <tag id="summary" class="text-justify"></tag>
+      </div><br><br>
+      <img id="recipeimage" class="d-block w-60 img-fluid mx-auto shadow rounded" alt="image"> <br><br>
+
+      <div style="display: block;" class="d-flex card-group">
+        <div class="card">
+          <img src="./assets/clock-solid.svg" style="margin-top: 20px" class="w-25 mx-auto card-img-top w-10" alt="...">
+          <div class="card-body">
+            <h2 class="card-title text-center">Prep Time</h2>
+            <p class="text-center" style="white-space:nowrap;display:inline;">Less than </p>
+            <p id="time" style="font-weight:bold;white-space:nowrap;display:inline;" class="text-center"></p>
+            <p class="text-center" style="white-space:nowrap;display:inline;"> minutes away!</p>
           </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="./assets/fork-spoon.png" class="w-25 mx-auto card-img-top" alt="...">
-        <div class="card-body">
-          <h2 class="card-title text-center">Details</h2>
-          <p class="align-left" style="white-space:nowrap;display:inline;
+        <div class="card">
+          <img src="./assets/star-solid.svg" style="margin-top: 20px" class="w-25 mx-auto card-img-top" alt="...">
+          <div class="card-body">
+            <h2 class="card-title text-center">Dietary/Allergy Restrictions</h2>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="Vegetarian">
+              <label class="form-check-label" for="Vegetarian">
+                Vegetarian </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="Vegan">
+              <label class="form-check-label" for="Vegan">
+                Vegan </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="Gluten-Free">
+              <label class="form-check-label" for="Gluten-Free">
+                Gluten-Free </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="Dairy-Free">
+              <label class="form-check-label" for="Dairy-Free">
+                Dairy-Free </label>
+            </div>
+          </div>
+        </div><br><br><br>
+        <div class="card">
+          <img src="./assets/fork-spoon.png" style="margin-top: 20px" class="w-25 mx-auto card-img-top" alt="...">
+          <div class="card-body">
+            <h2 class="card-title text-center">Details</h2>
+            <p class="align-left" style="white-space:nowrap;display:inline;
           ">Health score: </p>
-          <p id="healthscore" style="font-weight:bold;white-space:nowrap;display:inline;" class="text-center"></p></br>
-          <p class="text-center" style="display:inline;">Tender score: </p>
-          <p id="tenderscore" style="font-weight:bold;display:inline;" class="text-center"></p>
+            <p id="healthscore" style="font-weight:bold;white-space:nowrap;display:inline;" class="text-center"></p>
+            </br>
+            <p class="text-center" style="display:inline;">Tender score: </p>
+            <p id="tenderscore" style="font-weight:bold;display:inline;" class="text-center"></p>
+          </div>
         </div>
-      </div>
+      </div><br><br><br>
+
+
+      <h1 style="display: block;" class="text-left">Ingredients</h1>
+      <div class="row mx-auto w-100" id="ing"></div> <br><br><br>
+
+      <h1 class="text-left">Directions</h1>
+      <div class="container-fluid" id="recipe-container" style="margin-bottom: 150px;"></div>
+      <nav class="navbar rounded-pill navbar-float shadow-lg margin fixed-bottom border border-dark">
+        <a class="navbar-brand" href="./index.html"><img class="" src="./assets/tender-logo_gradient.png"
+            width="35px" /></a>
+        <a class="navbar-brand" href="stepbystep.html"><img class="" src="./assets/plus-solid.svg" /></a>
+        <a class="navbar-brand" href="#"><img class="" src="./assets/user-circle-solid.svg" /></a>
+      </nav>
     </div>
-
-
-    <h1 style="display: block;" class="text-left">Ingredients</h1>
-    <div class="row mx-auto w-100" id="ing"></div>
-
-    <h1 class="text-left">Directions</h1>
-    <div class="container-fluid" id="recipe-container"></div>
-    <nav class="navbar rounded-pill navbar-float shadow-lg margin">
-      <a class="navbar-brand" href="#"><img class="" src="./assets/tender-logo_gradient.png" width="35px" /></a>
-      <a class="navbar-brand" href="#"><img class="" src="./assets/plus-solid.svg" /></a>
-      <a class="navbar-brand" href="#"><img class="" src="./assets/user-circle-solid.svg" /></a>
-    </nav>
   </div>
 
   <!-- Optional JavaScript -->

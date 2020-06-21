@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Picker</title>
 	<link href="assets/tender-logo_gradient.png" rel="icon" type="image/png"><!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"><!-- Bootstrap CSS -->
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,700&display=swap"
+		rel="stylesheet">
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/picker.css" rel="stylesheet"><!-- Animate on Scroll Library -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -20,59 +22,50 @@
 	<script src="js/picker.js">
 	</script>
 </head>
+
 <body>
-  <div id="board">
-    <div class="container">
-      <div class="container mt-3 margin">
-      			<a class="back-button" href=""><img class="" src="./assets/arrow-left-solid.svg"></a>
-      		</div>
-      		<div class="container-fluid animate " id="swipecontainer"><img alt="pancake" class="d-block w-80 shadow rounded" src="./assets/pancake.png"></div>
-      		<div class="card w-75 container ">
-      			<div class="card-body ">
-      				<div class="container">
-                <div class="row justify-content-between">
-      					<h5 class="card-title">Pancake</h5>
-      					<div class="d-flex star">
-      						<img alt="star" class="" src="./assets/star-solid.svg">
-      						<p class="card-text ">4.8</p>
-      					</div>
-              </div>
-      				</div>
-      				<div class="d-flex">
-      					<img alt="clock" class="" src="./assets/clock-solid.svg">
-      					<p class="card-text">less than 15 minutes away.</p>
-      				</div>
-      			</div>
-      		</div>
+	<div id="board">
+		<div class="container mt-3 margin">
+			<a class="back-button" href="form.html"><img class="" src="./assets/arrow-left-solid.svg"></a>
+		</div>
+		<div id="nomore" class="nomore">
+			<h2>
+				There are no more recipe matches left. Please go back and change some settings
+				for more recipes!
+			</h2>
+		</div>
 
-          <div class="yes-or-no container-fluid mt-5">
-            <button class="border-0 no grow shadow">
-            <img src="./assets/times-solid.svg" />
-            </button>
-            <button class="border-0 yes grow shadow">
-            <img src="./assets/heart-solid.svg" />
-            </button>
-          </div>
-    </div>
-    <div id="nomore" class="nomore">There are no more recipe matches left. Please go back and change some settings for more recipes!</div>
-  </div>
+	</div>
+	<div class="container ">
 
-  <nav class="navbar rounded-pill navbar-float shadow-lg margin">
-    <a class="navbar-brand" href="#"><img class="" src="./assets/tender-logo_gradient.png" width="35px" /></a>
-    <a class="navbar-brand" href="#"><img class="" src="./assets/plus-solid.svg" /></a>
-    <a class="navbar-brand" href="#"><img class="" src="./assets/user-circle-solid.svg" /></a>
-  </nav>
+		<div class="yes-or-no container-fluid ">
+			<button class="border-0 no grow shadow">
+				<img src="./assets/times-solid.svg" />
+			</button>
+			<button class="border-0 yes grow shadow">
+				<img src="./assets/heart-solid.svg" />
+			</button>
+		</div>
+
+	</div>
+	<nav class="fixed-bottom navbar rounded-pill navbar-float shadow-lg margin">
+		<a class="navbar-brand" href="./index.html">
+			<img class="" src="./assets/tender-logo_gradient.png" width="35px" />
+		</a>
+		<a class="navbar-brand" href="#"><img class="" src="./assets/user-circle-solid.svg" /></a>
+	</nav>
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="js/picker.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/picker.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
 
 </body>
+
 </html>

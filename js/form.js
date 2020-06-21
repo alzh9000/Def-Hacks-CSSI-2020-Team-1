@@ -131,7 +131,7 @@ $(document).ready(function () {
 
 
             //continue code here, not outside
-            var monkeys = "52b37" + "53a" + "b4ec4157a0c130f7c47586d8";
+            var monkeys = "dd5eef8355ab" + "4fd88d0d12" + "117413c0fa";
             var url = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=' + monkeys + '&query=' + query + '&cuisine=' + cuisine + '&diet=' + diet + '&equipment=' + equipment + '&includeIngredients=' + ingredients + '&maxReadyTime=' + maxReadyTime + '&minCalories=' + minCalories + '&maxCalories=' + maxCalories + '&number=20';
             console.log(url);
 
@@ -149,7 +149,7 @@ $(document).ready(function () {
                     localStorage.setItem('recipe-results', result);
                     console.log(result);
                 }).then(function () {
-                    window.location.href='picker.html';
+                    window.location.href = 'picker.html';
                 })
                 .catch(error => console.log('error', error));
         });
@@ -230,7 +230,7 @@ $(document).ready(function () {
                     document.getElementById("input-file-now").value = "";
                     for (var i = 0; i < arr.length; i++) {
                         var idName = "'" + arr[i] + "'";
-                        var fitem = '<div class="food" id=' + idName + '>' + arr[i] + '<button type="button" class="close" aria-hidden="true" onClick="removeParentDiv(' + idName + ')">x</button></div>';
+                        var fitem = '<div class="food mx-auto" id=' + idName + '><h5 style="display:inline;">' + arr[i] + '</h5><button type="button" class="close" aria-hidden="true" onClick="removeParentDiv(' + idName + ')">x</button></div>';
                         //console.log(fitem);
                         if (document.getElementById(arr[i]) === null) {
                             $("#food-items").append(fitem);
