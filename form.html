@@ -3,6 +3,8 @@
 
 <head>
   <title>Title</title>
+  <link rel="icon" type="image/png" href="assets/tender-logo.png">
+
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -39,53 +41,71 @@
         aria-valuemin="0" aria-valuemax="100" style="width: 10%"></div>
     </div>
 
+    <!-- QUESTION 1 -->
     <div id="q1" data-aos=" flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
       class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
       <div class="card-body">
         <h1 class="card-title"> Home Appliances </h1>
         <p class="card-text">What appliances do you have in your kitchen?</p>
+        <div class="md-form mt-0">
+          <input type="search" placeholder="Search" name="search" class="form-control searchbox-input" required="">
+        </div>
       </div>
       <!-- Equipment List -->
-      <div class="card-deck">
-        <div class="card">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This card has even longer content than the first to show that equal height action.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This card has even longer content than the first to show that equal height action.</p>
-          </div>
-        </div>
+      <div class="card-columns" id="eq-cards"></div>
+    </div>
 
+  </div>
+  </div>
+
+  <!-- QUESTION 2 -->
+  <div id="q2" data-aos=" flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+    class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
+    <div class="card-body">
+      <h1 class="card-title"> Dietary/Allergy Restrictions </h1>
+      <p class="card-text">Do you have any turn-offs?</p>
+    </div>
+
+    <div class="card-group">
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Vegetarian</h5>
+          <p class="card-text"></p>
+        </div>
       </div>
-
+    </div>
+    <div class="card-group">
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Vegan</h5>
+          <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-group">
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Gluten-Free</h5>
+          <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-group">
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Dairy-Free</h5>
+          <p class="card-text"></p>
+        </div>
+      </div>
     </div>
   </div>
 
 
-  <!-- Optional JavaScript -->
+  <!-- Optional JavaScript-->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
