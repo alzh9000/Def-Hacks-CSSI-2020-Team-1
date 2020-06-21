@@ -131,7 +131,7 @@ $(document).ready(function () {
 
 
             //continue code here, not outside
-            var monkeys = "959d" + "d702f1c" + "349d49e3" + "aade65" + "a3e1f98";
+            var monkeys = "52b37" + "53a" + "b4ec4157a0c130f7c47586d8";
             var url = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=' + monkeys + '&query=' + query + '&cuisine=' + cuisine + '&diet=' + diet + '&equipment=' + equipment + '&includeIngredients=' + ingredients + '&maxReadyTime=' + maxReadyTime + '&minCalories=' + minCalories + '&maxCalories=' + maxCalories + '&number=20';
             console.log(url);
 

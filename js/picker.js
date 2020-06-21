@@ -170,7 +170,8 @@ class Carousel {
                     this.board.removeChild(this.topCard)
                     //if right, redirect
                     if (dirX === 1) {
-                        localStorage.setItem("r.id",recipes[i].id);
+                        localStorage.setItem("r.id",recipes[i-1].id);
+                        //console.log(localStorage.getItem("r.id"));
                         window.location = "recipe.html";
                     }
                     // add new card
@@ -209,7 +210,7 @@ class Carousel {
             card.classList.add('card');
 
             this.board.insertBefore(card, this.board.firstChild)
-            console.log(i);
+            console.log(recipes[i].id);
             i++;
         }
         

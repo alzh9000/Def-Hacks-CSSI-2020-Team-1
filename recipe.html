@@ -16,79 +16,68 @@
   <!-- Animate on Scroll Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+	</script>
+
+  <script src="js/recipe.js"></script>
 </head>
 
 <body>
 <div class="container">
-      <img src="./assets/pancake.png" class="d-block w-100 shadow" alt="pancake">
+      <img id="recipeimage" class="d-block w-75 img-fluid mx-auto shadow" alt="pancake">
 </div>
 <div class="container ">
   <div class="flex-md-column">
-    <h1 class="text-left">Pancake</h1>
-    <tag class="text-left"> &lt;3 Better than any waffle</tag>
+    <h1 id="recipetitle" class="text-left"></h1>
+    <tag id="summary" class="text-left"> &lt;3 Better than any waffle</tag>
   </div>
-    <div class="d-flex ">
+
+  <div class="card-group">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  
+    <div class="d-flex">
       <img src="./assets/clock-solid.svg" alt="clock"/>
-      <p class="text-left">
-        Less than 15 minutes away
-      </p>
+      <p class="text-left">Less than  </p> 
+      <p id="time" style="font-weight:bold" class="text-left"></p> 
+      <p class="text-left">  minutes away!</p>
     </div>
+
     <h3 class="text-left">Ingredients</h3>
-    <div class="container-fluid margin">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-      <label class="form-check-label" for="defaultCheck1">
-        1.5 cups flour
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-      <label class="form-check-label" for="defaultCheck1">
-        3.5 teaspoons baking powder
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-      <label class="form-check-label" for="defaultCheck1">
-        1 teaspoon salt
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-      <label class="form-check-label" for="defaultCheck1">
-        1 tablespoon white sugar
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-      <label class="form-check-label" for="defaultCheck1">
-        1.25 cups milk
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-      <label class="form-check-label" for="defaultCheck1">
-        1 egg
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-      <label class="form-check-label" for="defaultCheck1">
-        3 tablespoons butter, melted
-      </label>
-    </div>
-</div>
+    <div class="row" id="ing"></div>
+
 <h3 class="text-left">Directions</h3>
-<div class="container-fluid">
-  <h4 class="text-left">Step 1</h4>
-  <p>
-In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth.
-  </p>
-  <h4 class="text-left">Step 2</h4>
-  <p>
-Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.
-  </p>
-</div>
+<div class="container-fluid" id="recipe-container"></div>
 <nav class="navbar   rounded-pill navbar-float shadow-lg margin">
 <a class="navbar-brand" href="#"><img class="" src="./assets/tender-logo_gradient.png" width="35px"/></a>
 <a class="navbar-brand" href="#"><img class="" src="./assets/plus-solid.svg"/></a>
