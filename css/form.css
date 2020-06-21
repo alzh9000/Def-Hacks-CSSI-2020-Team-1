@@ -1,0 +1,50 @@
+@font-face {
+   font-family: 'Arciform';
+   src: url('../assets/Arciform.woff2') format('woff2'),
+       url('../assets/Arciform.woff') format('woff'), url("../assets/Arciform.ttf") format("truetype"), url('../assets/Arciform.otf')  format('opentype');
+   font-weight: normal;
+   font-style: normal;
+   font-display: swap;
+}
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,700&display=swap');
+
+ body{
+   background-color: #FCFCFC;
+   font-family: "Montserrat", sans-serif;
+ }
+ .card{
+   padding: 10px;
+ }
+ .card-title{
+   font-family: "Arciform", sans-serif;
+   margin-top: 50px;
+
+ }
+ .card-text{
+    font-family: "Montserrat", sans-serif;
+ }
+.bg-gradient{
+        background-image: linear-gradient(to bottom right, #C83E4D, #F4B860);
+}
+.btn-onyx{
+color:#32373B;
+border-color:transparent;
+border: 3px solid #32373B;
+
+}
+.ingredients .row{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input[type="search"], input[type="text"]{
+  padding: 5px;
+}
+.margin{
+  margin-top: 10px;
+}
