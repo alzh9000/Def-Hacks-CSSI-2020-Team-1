@@ -36,12 +36,13 @@
     <!-- Progress bar for how far they are thru the form -->
     <div class="progress">
       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100"
-        aria-valuemin="0" aria-valuemax="100" style="width: 10%"></div>
+        aria-valuemin="0" aria-valuemax="100" style="width: 14.29%" id="bar"></div>
     </div>
 
     <!-- QUESTION 1 -->
     <div id="q1" class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
       <div class="card-body">
+        <button id="next1" class="btn btn-primary w-15 float-right">Next</button>
         <h1 class="card-title"> Home Appliances </h1>
         <p class="card-text">What appliances do you have in your kitchen?</p>
         <div class="md-form mt-0">
@@ -51,7 +52,6 @@
       <!-- Equipment List -->
       <div class="card-columns" style="column-count: 6" id="eq-cards"></div>
     </div>
-
   </div>
   </div>
 
@@ -59,6 +59,8 @@
   <div id="q2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
     class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
     <div class="card-body">
+      <button id="prev2" class="btn btn-primary w-15 float-left">Previous</button>
+      <button id="next2" class="btn btn-primary w-15 float-right">Next</button>
       <h1 class="card-title"> Dietary/Allergy Restrictions </h1>
       <p class="card-text">Do you have any turn-offs?</p>
     </div>
@@ -107,50 +109,217 @@
   <div id="q3" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
     class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
     <div class="card-body">
+      <button id="prev3" class="btn btn-primary w-15 float-left">Previous</button>
+      <button id="next3" class="btn btn-primary w-15 float-right">Next</button>
       <h1 class="card-title"> Ingredients </h1>
       <p class="card-text">What are you looking for in a Tender match?</p>
     </div>
+    <div class="row">
+      <div class="col">
+        <div class="input-group mb-3">
+          <h4 class="w-100">Add your own!</h4>
+          <input type="text" class="form-control" id="textIngr" placeholder="Type your ingredient">
+          <div class="input-group-append">
+            <button id="add" class="btn btn-primary">Add!</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h4>Let our AI scan your ingredients for you!</h4>
+        <input type="file" id="input-file-now" style="display: none;" accept="image/*" />
+        <input type="button" class="btn btn-primary w-50 m-auto" value="Upload image"
+          onclick="document.getElementById('input-file-now').click();" />
+      </div>
+    </div>
+    <!-- Food items are output to a list here -->
     <div id="food-items"></div>
-    <input type="file" id="input-file-now" style="display: none;" accept="image/*" />
-    <input type="button" value="Upload Image" onclick="document.getElementById('input-file-now').click();" />
 
 
   </div>
 
   <!-- QUESTION 4 -->
-  <div id="q4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-    class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
+  <div id="q4" class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
     <div class="card-body">
+      <button id="prev4" class="btn btn-primary w-15 float-left">Previous</button>
+      <button id="next4" class="btn btn-primary w-15 float-right">Next</button>
       <h1 class="card-title"> What do you want to make? </h1>
       <p class="card-text">Do you have a type?</p>
     </div>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" id="user_req" placeholder="Optional!">
+      <!-- <div class="input-group-append">
+        <button id="user_req_button" class="btn btn-primary">Add!</button>
+      </div> -->
+    </div>
+
   </div>
 
   <!-- QUESTION 5 -->
-  <div id="q5" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-    class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
+  <div id="q5" class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
     <div class="card-body">
+      <button id="prev5" class="btn btn-primary w-15 float-left">Previous</button>
+      <button id="next5" class="btn btn-primary w-15 float-right">Next</button>
       <h1 class="card-title"> Type of Cuisine </h1>
       <p class="card-text">Tender Passport</p>
+    </div>
+    <div class="card-group">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Middle Eastern</h5>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="MiddleEastern">
+            <label class="custom-control-label" for="MiddleEastern"></label>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">European</h5>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="European">
+            <label class="custom-control-label" for="European"></label>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">British</h5>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="British">
+            <label class="custom-control-label" for="British"></label>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">French</h5>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="French">
+            <label class="custom-control-label" for="French"></label>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">German</h5>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="German">
+            <label class="custom-control-label" for="German"></label>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Southern</h5>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Southern">
+            <label class="custom-control-label" for="Southern"></label>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Italian</h5>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Italian">
+            <label class="custom-control-label" for="Italian"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-group">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Mexican</h5>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Mexican">
+            <label class="custom-control-label" for="Mexican"></label>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Mediterranean</h5>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Mediterranean">
+            <label class="custom-control-label" for="Mediterranean"></label>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Chinese</h5>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Chinese">
+            <label class="custom-control-label" for="Chinese"></label>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">American</h5>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="American">
+            <label class="custom-control-label" for="American"></label>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Asian</h5>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Asian">
+            <label class="custom-control-label" for="Asian"></label>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Japanese</h5>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Japanese">
+            <label class="custom-control-label" for="Japanese"></label>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Indian</h5>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Indian">
+            <label class="custom-control-label" for="Indian"></label>
+          </div>
+        </div>
+      </div>
+
+
+
     </div>
   </div>
 
   <!-- QUESTION 6 -->
-  <div id="q6" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-    class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
+  <div id="q6" class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
     <div class="card-body">
+      <button id="prev6" class="btn btn-primary w-15 float-left">Previous</button>
+      <button id="next6" class="btn btn-primary w-15 float-right">Next</button>
       <h1 class="card-title"> Max Time </h1>
       <p class="card-text">How much time do you want to commit to your Tender match?</p>
     </div>
+    <input type="text" id="max_time" placeholder="Time in minutes">
   </div>
 
   <!-- QUESTION 7 -->
-  <div id="q7" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
-    class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
+  <div id="q7" class="card text-center w-75 mx-auto my-4 border border-primary border-thick">
     <div class="card-body">
+      <button id="prev7" class="btn btn-primary w-15 float-left">Previous</button>
+      <button id="subm" class="btn btn-primary w-15 float-right">Submit</button>
       <h1 class="card-title"> Max/Min Calories </h1>
       <p class="card-text">Picky about your Tender match?</p>
     </div>
+    Min:
+    <input type="text" id="min_cal">
+    Max:
+    <input type="text" id="max_cal">
   </div>
 
 
