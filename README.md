@@ -2,6 +2,9 @@
 Tinder for food - the fastest, most convenient way to find the perfect recipe _match_ for you! 
 Check us out at 10der.tech! 
 
+![Tender](https://github.com/alzh9000/Def-Hacks-CSSI-2020-Team-1/blob/master/assets/tender-details.png
+
+
 ## Inspiration
 Many people love to cook, but when they go online to search for a dish or recipe, the vast options that appear can be overwhelming. In addition, what if you don’t have the equipment for a specific recipe, or you need to find a gluten-free or vegetarian recipe? A simple internet search presents people with the paradox of choice _and_ lacks the customization necessary for people with specific preferences. To better enable people to be able to find the right recipes for them, we created Tender. 
 
