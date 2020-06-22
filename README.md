@@ -2,7 +2,7 @@
 Tinder for food - the fastest, most convenient way to find the perfect recipe _match_ for you! 
 Check us out at 10der.tech! 
 
-![Tender](https://github.com/alzh9000/Def-Hacks-CSSI-2020-Team-1/blob/master/assets/tender-details.png
+![Tender](https://github.com/alzh9000/Def-Hacks-CSSI-2020-Team-1/blob/master/assets/tender-details.png?raw=true)
 
 
 ## Inspiration
