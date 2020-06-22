@@ -164,7 +164,7 @@ $(document).ready(function () {
             let name = obj[i].name;
             let checkboxId = 'Card' + name;
             // REMOVED ANIMATIONS FOR NOW: data-aos="zoom-in"
-            var newCard = '<div id="' + name + '"  class="card col-12 eq"> <img class="card-img-top" src="' + image + '" alt="Equipment Image"> <div class="card-body"> <h5 class="card-title">' + name + '</h5> <div class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input" id="' + checkboxId + '"> <label class="custom-control-label" for="' + checkboxId + '">Got it!</label> </div> </div> </div>';
+            var newCard = '<div id="' + name + '"  class="card col-12 eq" data-aos="zoom-in"> <img class="card-img-top" src="' + image + '" alt="Equipment Image"> <div class="card-body"> <h5 class="card-title">' + name + '</h5> <div class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input" id="' + checkboxId + '"> <label class="custom-control-label" for="' + checkboxId + '">Got it!</label> </div> </div> </div>';
             $(".card-columns").append(newCard);
         }
     });
@@ -254,35 +254,6 @@ function removeParentDiv(id) {
     var myobj = document.getElementById(id);
     myobj.remove();
 }
-
-// async function analyzeImage(url) {
-//     var myHeaders = new Headers();
-//     myHeaders.append("Content-Type", "application/json");
-//     var raw = JSON.stringify({
-//         "requests": [{
-//             "image": {
-//                 "content": url
-//             },
-//             "features": [{
-//                 "type": "LABEL_DETECTION"
-//             }]
-//         }]
-//     });
-//     var requestOptions = {
-//         method: 'POST',
-//         headers: myHeaders,
-//         body: raw,
-//         redirect: 'follow'
-//     };
-//     fetch("https://vision.googleapis.com/v1/images:annotate?key=AIzaSyAlfumiq1JqbC8naT9APEDFrZt6jLKyUSw", requestOptions)
-//         .then(response => response.text())
-//         .then((result) => {
-//             //console.log(result);
-//             return Promise.resolve(result);
-//         })
-//         .catch(error => console.log('error', error));
-// }
-
 
 function objToFood(o) {
     o = o.responses[0].labelAnnotations;

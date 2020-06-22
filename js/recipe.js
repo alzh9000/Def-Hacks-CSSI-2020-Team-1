@@ -52,7 +52,7 @@ $(document).ready(function () {
             for (var j = 0; j < ingr.length; j++) {
                 //console.log(ingr[i]);
                 var image = 'https://spoonacular.com/cdn/ingredients_250x250/' + ingr[j].image;
-                var inCard = '<div id="' + ingr[j].original + '"  class="card col-2"> <div class="card-header"><img class="card-img-bottom" src="' + image + '" alt="Ingredient Image"></div> <div class="card-body"> <h5 class="card-title">' + ingr[j].original + '</h5> </div></div>';
+                var inCard = '<div id="' + ingr[j].original + '"  class="card col-2" data-aos="zoom-in"> <div class="card-header"><img class="card-img-bottom" src="' + image + '" alt="Ingredient Image"></div> <div class="card-body"> <h5 class="card-title">' + ingr[j].original + '</h5> </div></div>';
                 $('#ing').append(inCard);
             }
 
@@ -62,7 +62,7 @@ $(document).ready(function () {
                 let stepContent = document.createElement('div');
                 let stepNumber = i + 1
 
-                stepContent.innerHTML = '<h4 class="text-left">Step ' + stepNumber + '</h4> <p>' + res.analyzedInstructions[0].steps[i].step + '</p>';
+                stepContent.innerHTML = '<h4 class="text-left" data-aos="zoom-in-right">Step ' + stepNumber + '</h4> <p data-aos="zoom-in-right">' + res.analyzedInstructions[0].steps[i].step + '</p>';
                 step.appendChild(stepContent);
             }
             document.getElementById('recipe-container').append(step);
