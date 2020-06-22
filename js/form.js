@@ -119,7 +119,7 @@ $(document).ready(function () {
         if (document.getElementById("max_cal").value != "") maxCalories = document.getElementById("max_cal").value;
 
         var equipment = "";
-        $.getJSON('./assets/equipment.json', function (obj) {
+        $.getJSON('https://alzh9000.github.io/Def-Hacks-CSSI-2020-Team-1/assets/equipment.json', function (obj) {
             for (var i = 0; i < obj.length; i++) {
                 let image = obj[i].imagelink;
                 let name = obj[i].name;
@@ -158,7 +158,7 @@ $(document).ready(function () {
 
 
     // display cards of the equipment name + image
-    $.getJSON('/assets/equipment.json', function (obj) {
+    $.getJSON('https://alzh9000.github.io/Def-Hacks-CSSI-2020-Team-1/assets/equipment.json', function (obj) {
         for (var i = 0; i < obj.length; i++) {
             let image = obj[i].imagelink;
             let name = obj[i].name;
