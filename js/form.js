@@ -164,7 +164,7 @@ $(document).ready(function () {
             let name = obj[i].name;
             let checkboxId = 'Card' + name;
             // REMOVED ANIMATIONS FOR NOW: data-aos="zoom-in"
-            var newCard = '<div id="' + name + '"  class="card col-12 eq" data-aos="zoom-in"> <img class="card-img-top" src="' + image + '" alt="Equipment Image"> <div class="card-body"> <h5 class="card-title">' + name + '</h5> <div class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input" id="' + checkboxId + '"> <label class="custom-control-label" for="' + checkboxId + '">Got it!</label> </div> </div> </div>';
+            var newCard = '<div id="' + name + '"  class="card col-12 eq"> <img class="card-img-top" src="' + image + '" alt="Equipment Image"> <div class="card-body"> <h5 class="card-title">' + name + '</h5> <div class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input" id="' + checkboxId + '"> <label class="custom-control-label" for="' + checkboxId + '">Got it!</label> </div> </div> </div>';
             $(".card-columns").append(newCard);
         }
     });
