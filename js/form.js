@@ -119,7 +119,7 @@ $(document).ready(function () {
         if (document.getElementById("max_cal").value != "") maxCalories = document.getElementById("max_cal").value;
 
         var equipment = "";
-        $.getJSON('/assets/equipment.json', function (obj) {
+        $.getJSON('./assets/equipment.json', function (obj) {
             for (var i = 0; i < obj.length; i++) {
                 let image = obj[i].imagelink;
                 let name = obj[i].name;
